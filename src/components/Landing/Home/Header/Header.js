@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./Header.css";
 
 /* This component will contain the Log In button, as well as an additional nav menu */
@@ -9,8 +10,9 @@ export default class Header extends Component {
         <div className="logo-login">
           <div className="headerLeft">DOGGO</div>
           <div className="btnContainer">
-            <div className="loginBtn">LOG IN</div>
+            <div className="button" id='loginBtn'>LOG IN</div>
           </div>
+          
         </div>
       </header>
     );
