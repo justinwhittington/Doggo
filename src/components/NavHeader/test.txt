@@ -1,0 +1,166 @@
+ <ul className="nav nav-tabs">
+    <li className="nav-item">
+      <Link
+        to="/"
+        className={
+          window.location.pathname === "/" ? "nav-link active" : "nav-link"
+        }
+      >
+        About
+      </Link>
+    </li>
+    <li className="nav-item">
+      <Link
+        to="/discover" 
+        className={
+          window.location.pathname === "/discover" ? "nav-link active" : "nav-link"
+        }
+      >
+        Discover
+      </Link>
+    </li>
+    <li className="search">
+      <Link
+        to="/search"
+        className={
+          window.location.pathname === "/search" ? "nav-link active" : "nav-link"
+        }
+      >
+        Search
+      </Link>
+    </li>
+    
+  </ul> 
+
+
+
+  ////////////
+  /////////////
+  ////////////
+
+
+   <div className="pos-f-t">
+    <div className="collapse" id="navbarToggleExternalContent">
+      <div className="bg-dark p-4">
+        <h5 className="text-white h4">Collapsed content</h5>
+        <ul className="nav nav-tabs">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === "/"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/discover"
+              className={
+                window.location.pathname === "/discover"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Discover
+            </Link>
+          </li>
+          <li className="search">
+            <Link
+              to="/search"
+              className={
+                window.location.pathname === "/search"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Search
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav className=" navbar navbar-dark bg-dark">
+    <a href="#" className="navbar-left pull-left"><img className='logo' alt='logo' src='../../images/logo2.png' /></a>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      
+      
+    </nav>
+  </div>
+
+
+  //////////////
+  /////////////////
+  ///////////
+
+  const Nav = () => (
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    
+      <img src='./images/logo2.png' className="navbar-brand" alt='logo' />
+    
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon" />
+    </button>
+
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <Link
+            to="/"
+            className={
+              window.location.pathname === "/" ? "nav-link active" : "nav-link"
+            }
+          >
+            About
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/discover"
+            className={
+              window.location.pathname === "/discover"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Discover
+          </Link>
+        </li>
+        <li className="search">
+          <Link
+            to="/search"
+            className={
+              window.location.pathname === "/search"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Search
+          </Link>
+        </li>
+      </ul>
+
+      
+    </div>
+  </nav>

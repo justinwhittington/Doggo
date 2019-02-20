@@ -1,0 +1,10 @@
+.homeFooter {
+    background: linear-gradient(to left, #10ff90, #00fee1, #f440e8);
+    height: 15%;
+    position: relative;
+    bottom: 0;
+    font-style: italic;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+  }

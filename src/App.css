@@ -1,0 +1,18 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, #fd297b, #ff5864, #ff655b);
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: proxima-nova, sans-serif;
+  
+}
+
+
+#appContainer {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}

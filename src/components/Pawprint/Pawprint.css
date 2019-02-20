@@ -1,0 +1,99 @@
+.paw-print {
+  
+}
+
+/* 
+Dots
+*/
+.dot {
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+background-color: red;
+  display: inline-block;
+  height: 15px;
+  width: 10px;
+  margin: 0 10px;
+/*   position: relative; */
+  position: absolute;  
+}
+
+#dot1 {
+  
+  left: 6px;
+  top: 17px;
+}
+
+#dot2 {
+  
+  left: 18px;
+  top: 3.2px;
+}
+
+#dot3 {
+  
+  left: 40px;
+  top: 3.2px;
+}
+
+#dot4 {
+  
+  left: 52px;
+  top: 17px;
+}
+
+
+/* 
+Heart Section
+*/
+.heart {
+  animation: heartbeat 1s infinite;
+  background-color: red;
+  display: inline-block;
+  height: 15px;
+  margin: 0 5px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute; 
+  left: 2%;
+  top: 45%;
+  width: 15px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  position: absolute;
+  width: 15px;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+/* @keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( 1 )
+      rotate(-45deg);    
+  }
+  20%
+  {
+    transform: scale( 1.25 )
+      rotate(-45deg);  
+  }
+   40%
+  {
+    transform: scale( 1.5 )
+      rotate(-45deg);
+  }
+} */

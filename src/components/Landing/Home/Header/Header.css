@@ -1,0 +1,58 @@
+#homeHeader {
+    height: 20%;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-login {
+    width: 90%;
+    border: dotted 1px black;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+  }
+  
+  .headerLeft {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .btnContainer {
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .loginBtn {
+    width: 100px;
+    height: 40px;
+    background: white;
+    color: #ff655c;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  
+  .loginTxt {
+    text-transform: uppercase;
+    /* background: linear-gradient(to left, #fd297b, #ff5864, #ff655b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #ff655c;
+    font-size: 20px;
+    margin: auto;
+  }
+  
+  .loginBtn:hover {
+    background: linear-gradient(to left, #fd297b, #ff5864, #ff655b);
+    color: white;
+  }

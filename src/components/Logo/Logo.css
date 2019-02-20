@@ -1,0 +1,62 @@
+/* #puppy {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#ears {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ear {
+  width: 0;
+  height: 0;
+}
+
+#leftEar {
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  
+  border-left: 30px solid green;
+}
+
+#rightEar {
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  
+  border-right:30px solid blue; 
+} */
+
+.heart {
+	position: relative;
+	width: 40px;
+  /* margin-top: 45%; */ 
+}
+
+.heart:before,
+.heart:after {
+   background: white;
+   position: absolute;
+   width: 110%;
+   height: 50%;
+   top: 0;
+   left: 44px;
+   content: '';
+   border-radius: 50px 50px 0 0;
+   transform: rotate(-45deg) translateZ(0);
+   -webkit-transform: rotate(-45deg) translateZ(0);
+   transform-origin: 0 100%;
+   -webkit-transform-origin: 0 100%;
+}
+ 
+.heart:after {
+   left: 0;
+   transform: rotate(45deg) translateZ(0);
+   -webkit-transform: rotate(45deg) translateZ(0);
+   transform-origin :100% 100%;
+   -webkit-transform-origin: 100% 100%;
+}
+ 
+ 

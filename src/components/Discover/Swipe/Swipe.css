@@ -1,0 +1,9 @@
+.swipeButtons {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btn {
+    margin: 10px;
+}
