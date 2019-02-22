@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Header from './Header';
-import Footer from './Footer';
-import Logo from "../../Logo";
+import {Link} from 'react-router-dom';
+import Header from "./Header";
+import Footer from "./Footer";
+// import Logo from "../../Logo";
+import Images from "../../../assets/backgroundImages.js";
 import "./Home.css";
 
 /*
@@ -10,24 +12,56 @@ The main content for the landing page. Here the user will login, signup, and acc
 
 export default class Home extends Component {
   state = {
-    image: ""
+    image: "../../../assets/images/dog1.jpg"
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.updateBackground();
+  }
+
+  // Trying to figure out how to render background image on timer
+  updateBackground() {
+
+    for (let i = 0, len = Images.length; i < len; i++) {
+      setTimeout(
+        () =>
+          this.setState(() => {
+            return {
+              image: Images[i]
+            };
+          }),
+        2000 // Adjusts Loader lenght
+      );
+    }
+  console.log(this.state.image);
+  }
+
+  
 
   render() {
+
+    let divStyle = {
+      // backgroundImage: `url(${this.state.image})`,
+      // backgroundSize: '100%',
+    }
+
     return (
       <div id="homeContainer">
-        <div id="homeContent">
-          <Header></Header>
+        <div id="homeContent" style={divStyle}>
+          <Header />
 
-          <div className='landingBillBoard'>
-            
+          <div className="landingBillBoard">
+            <h1>Single is a terrible thing to waste.</h1>
           </div>
-          <div className='termsOfService'></div>
-          <div className='signUpBtn'></div>
+          <div className="termsOfService" />
+          <div />
+          <div className="btnContainer" id="homeSignUp">
+            <Link to='/discover' className="button" id="signupBtn" >
+              Sign Up
+            </Link>
+          </div>
         </div>
-        <Footer></Footer>
+        <Footer />
       </div>
     );
   }

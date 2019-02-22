@@ -8,7 +8,7 @@ const DogCard = props => (
       
     </div>
   </div>
-);
+); 
 
 export default DogCard;
  

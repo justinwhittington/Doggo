@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loader from "../Loader";
 import Wrapper from "../Wrapper";
 import Api from "../../utils/Api";
 import DogCard from "./DogCard";
@@ -8,11 +9,24 @@ import Match from "./Match";
 class Discover extends Component {
   state = {
     result: {},
-    isMatch: false
+    isMatch: false,
+    load: true
   };
 
   componentDidMount() {
-    this.randomDog(); 
+    if (this.state.load) {
+      setTimeout(
+        () =>
+          this.setState(() => {
+            return {
+              load: false
+            };
+          }),
+        1000 // Adjusts Loader lenght
+      );
+    }
+
+    this.randomDog();
   }
 
   randomDog = () => {
@@ -23,7 +37,7 @@ class Discover extends Component {
       .then(res => {
         this.setState({ result: res.data.message });
         console.log(res.data);
-      }) 
+      })
       .catch(err => console.log(err));
   };
 
@@ -51,19 +65,23 @@ class Discover extends Component {
     }, 3000);
   };
 
-  render() { 
+  render() {
     return (
-      <div>
-        <Wrapper>
-          <div>
-            <DogCard image={this.state.result} />
-            {this.state.isMatch ? (
-              <Match />
-            ) : (
-              <Swipe like={this.like} dislike={this.dislike} />
-            )}
-          </div>
-        </Wrapper>
+      <div className='oneHundredHeight'>
+        {this.state.load ? (
+          <Loader />
+        ) : (
+          <Wrapper>
+            <div>
+              <DogCard image={this.state.result} />
+              {this.state.isMatch ? (
+                <Match />
+              ) : (
+                <Swipe like={this.like} dislike={this.dislike} />
+              )}
+            </div>
+          </Wrapper>
+        )}
       </div>
     );
   }
