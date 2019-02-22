@@ -5,9 +5,9 @@
 
 #homeContent {
   height: 85%;
-  /* background-image: url("../../../assets/images/dog1.jpg");  */
+  background-image: url("../../../assets/images/dog3.jpg");  
   background-size: 100%;
-  background-position: center center;
+  /* background-position: center center; */
   background-repeat: no-repeat;
   
 }

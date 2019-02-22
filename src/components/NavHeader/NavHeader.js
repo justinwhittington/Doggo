@@ -8,7 +8,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink 
 } from "reactstrap";
 
 export default class NavHeader extends React.Component {
@@ -25,7 +25,7 @@ export default class NavHeader extends React.Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
-  }
+  } 
 
   render() {
     return (
