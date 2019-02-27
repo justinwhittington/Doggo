@@ -10,7 +10,8 @@ class Discover extends Component {
   state = {
     result: {},
     isMatch: false,
-    load: true
+    load: true,
+    liked: null
   };
 
   componentDidMount() {
@@ -44,6 +45,8 @@ class Discover extends Component {
   like = () => {
     let yourChance = Math.floor(Math.random() * 5) + 1;
 
+    this.setState({liked: true});
+
     console.log(yourChance);
     if (yourChance === 1) {
       this.setState({
@@ -56,6 +59,8 @@ class Discover extends Component {
   };
 
   dislike = () => {
+
+    this.setState({liked: false});
     this.randomDog();
   };
 
@@ -67,20 +72,22 @@ class Discover extends Component {
 
   render() {
     return (
-      <div className='oneHundredHeight'>
+      <div className="oneHundredHeight">
         {this.state.load ? (
           <Loader />
         ) : (
-          <Wrapper>
-            <div>
-              <DogCard image={this.state.result} />
-              {this.state.isMatch ? (
-                <Match />
-              ) : (
-                <Swipe like={this.like} dislike={this.dislike} />
-              )}
-            </div>
-          </Wrapper>
+          <div className="oneHundredHeight">
+            <Wrapper className="oneHundredHeight">
+              <div className="oneHundredHeight">
+                <DogCard image={this.state.result} liked={this.state.liked}/>
+                {this.state.isMatch ? (
+                  <Match />
+                ) : (
+                  <Swipe like={this.like} dislike={this.dislike}  />
+                )}
+              </div>
+            </Wrapper>
+          </div>
         )}
       </div>
     );
