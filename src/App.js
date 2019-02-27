@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div id='appContainer'>
+        <div id='appContainer' className="oneHundredHeight">
           {/* <NavHeader /> */}
           <Route path="/" exact={true} component={Landing} />
           <Route exact path="/discover" component={Discover} />
