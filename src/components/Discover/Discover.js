@@ -83,11 +83,11 @@ class Discover extends Component {
                 {/* <DogCard image={this.state.result} liked={this.state.liked}/> */}
                 <Deck 
                 image={this.state.result}/>
-                {this.state.isMatch ? (
+                {/* {this.state.isMatch ? (
                   <Match />
                 ) : (
                   <Swipe like={this.like} dislike={this.dislike}  />
-                )}
+                )} */}
               </div>
             </Wrapper>
           </div>
