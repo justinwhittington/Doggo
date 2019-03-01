@@ -5,12 +5,13 @@ import Api from "../../utils/Api";
 import DogCard from "./DogCard";
 import Swipe from "./Swipe";
 import Match from "./Match";
+import Deck from './DogCard/test';
 
 class Discover extends Component {
   state = {
     result: {},
     isMatch: false,
-    load: true,
+    load: true, 
     liked: null
   };
 
@@ -79,7 +80,9 @@ class Discover extends Component {
           <div className="oneHundredHeight">
             <Wrapper className="oneHundredHeight">
               <div className="oneHundredHeight">
-                <DogCard image={this.state.result} liked={this.state.liked}/>
+                {/* <DogCard image={this.state.result} liked={this.state.liked}/> */}
+                <Deck 
+                image={this.state.result}/>
                 {this.state.isMatch ? (
                   <Match />
                 ) : (
