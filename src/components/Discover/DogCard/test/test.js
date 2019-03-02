@@ -12,7 +12,7 @@ const cards = [
   "http://www.dictionary.com/e/wp-content/uploads/2018/05/doggo-300x300.jpg",
   "https://i.redd.it/98tmpr7vugvy.jpg"
 ];
-
+ 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({
   x: 0,

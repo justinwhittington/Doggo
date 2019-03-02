@@ -10,7 +10,7 @@ export default class Header extends Component {
         <div className="logo-login">
           <div className="headerLeft">DOGGO</div>
           <div className="btnContainer">
-            <div className="button" id='loginBtn'>LOG IN</div>
+            <div className="button" id='loginBtn'>DISCOVER</div>
           </div>
           
         </div>

@@ -57,7 +57,7 @@ export default class Home extends Component {
           <div />
           <div className="btnContainer" id="homeSignUp">
             <Link to='/discover' className="button" id="signupBtn" >
-              Sign Up
+              Discover
             </Link>
           </div>
         </div>

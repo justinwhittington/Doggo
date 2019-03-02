@@ -72,6 +72,7 @@ class Discover extends Component {
   };
 
   render() {
+    console.log(this.state.result)
     return (
       <div className="oneHundredHeight">
         {this.state.load ? (
@@ -82,7 +83,7 @@ class Discover extends Component {
               <div className="oneHundredHeight">
                 {/* <DogCard image={this.state.result} liked={this.state.liked}/> */}
                 <Deck 
-                image={this.state.result}/>
+                images={this.state.result}/>
                 {/* {this.state.isMatch ? (
                   <Match />
                 ) : (
