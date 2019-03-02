@@ -3,12 +3,12 @@ import "./Swipe.css";
 
 const Swipe = props => (
   <div className="swipeButtons">
-    <button type="button" class="btn btn-success" onClick={() => props.like()}>
+    <button type="button" className="btn btn-success" onClick={() => props.like()}>
       √
     </button>
     <button
       type="button"
-      class="btn btn-danger"
+      className="btn btn-danger"
       onClick={() => props.dislike()}
     >
       X
