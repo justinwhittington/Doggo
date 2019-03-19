@@ -10,7 +10,7 @@ const DogCard = props => {
 
   return (
     <animated.div style={springProps}>
-      <div className="card">
+      <div className="card" id={props.swiper}>
         <img className="card-img-top" src={props.image} alt={props.image} />
       </div>
     </animated.div>
