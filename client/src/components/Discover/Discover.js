@@ -5,14 +5,15 @@ import Api from "../../utils/Api";
 import DogCard from "./DogCard";
 import Swipe from "./Swipe";
 import Match from "./Match";
-import Deck from './DogCard/test';
+import Deck from "./DogCard/test";
 
 class Discover extends Component {
   state = {
     result: {},
     isMatch: false,
-    load: true, 
-    liked: null
+    load: true,
+    liked: null,
+    swipeDirection: null
   };
 
   componentDidMount() {
@@ -31,9 +32,15 @@ class Discover extends Component {
     this.randomDog();
   }
 
+  handleClick() {
+    console.log("clicked");
+  }
+
   randomDog = () => {
     this.setState({
-      isMatch: false
+      isMatch: false,
+      liked: null,
+      swipeDirection: null
     });
     Api.random()
       .then(res => {
@@ -44,24 +51,21 @@ class Discover extends Component {
   };
 
   like = () => {
+    // Determines whether you get a match by picking a random number
     let yourChance = Math.floor(Math.random() * 5) + 1;
-
-    this.setState({liked: true});
-
-    console.log(yourChance);
+    // this.setState({ liked: true, swipeDirection: "leftSwipe" });
     if (yourChance === 1) {
       this.setState({
         isMatch: true
       });
       this.revert();
     } else {
-      this.randomDog();
+      //this.randomDog();
     }
   };
 
   dislike = () => {
-
-    this.setState({liked: false});
+    this.setState({ liked: false, swipeDirection: "rightSwipe" });
     this.randomDog();
   };
 
@@ -72,7 +76,7 @@ class Discover extends Component {
   };
 
   render() {
-    console.log(this.state.result)
+    console.log(this.state.result);
     return (
       <div className="oneHundredHeight">
         {this.state.load ? (
@@ -81,14 +85,18 @@ class Discover extends Component {
           <div className="oneHundredHeight">
             <Wrapper className="oneHundredHeight">
               <div className="oneHundredHeight">
-                {/* <DogCard image={this.state.result} liked={this.state.liked}/> */}
-                <Deck 
-                images={this.state.result}/>
-                {/* {this.state.isMatch ? (
+                <DogCard image={this.state.result} liked={this.state.liked} id={this.state.swipeDirection}/>
+                {/* <Deck 
+                images={this.state.result}/> This is the react-spring test */}
+                {this.state.isMatch ? (
                   <Match />
                 ) : (
-                  <Swipe like={this.like} dislike={this.dislike}  />
-                )} */}
+                  <Swipe
+                    like={this.like}
+                    dislike={this.dislike}
+                    handleClick={this.handleClick}
+                  />
+                )}
               </div>
             </Wrapper>
           </div>
