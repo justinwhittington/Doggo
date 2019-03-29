@@ -5,7 +5,7 @@ import Api from "../../utils/Api";
 import DogCard from "./DogCard";
 import Swipe from "./Swipe";
 import Match from "./Match";
-import Deck from "./DogCard/test";
+// import Deck from "./DogCard/test";
 
 class Discover extends Component {
   state = {

@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated, interpolate } from "react-spring";
+import { useSpring, animated } from "react-spring";
 
 import "./DogCard.css";
 
